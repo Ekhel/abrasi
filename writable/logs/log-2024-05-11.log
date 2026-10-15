@@ -1,0 +1,59 @@
+CRITICAL - 2024-05-11 03:54:10 --> Class 'App\Models\M_paslon' not found
+in APPPATH\Controllers\Paslon.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Paslon->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-11 03:55:20 --> Too few arguments to function App\Models\M_paslon::UpdateOne(), 2 passed in C:\xampp\htdocs\app_jjo\app\Controllers\Paslon.php on line 36 and exactly 3 expected
+in APPPATH\Models\M_paslon.php on line 24.
+ 1 APPPATH\Controllers\Paslon.php(36): App\Models\M_paslon->UpdateOne([...], 'tb_paslon')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Paslon->create_paslon_post()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2024-05-11 03:59:00 --> mysqli_sql_exception: Unknown column 'nama_wakiol' in 'field list' in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_pasl...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_pasl...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_pasl...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_pasl...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_paslon.php(28): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Paslon.php(78): App\Models\M_paslon->UpdateOne(Array, Array, 'tb_paslon')
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Paslon->update_paslon_post()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-11 03:59:00 --> Unknown column 'nama_wakiol' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_paslon` SET `no_urut` = \'01\', `nama_paslon` = \'JAN JAP ORMUSERAY\', `nama_wakiol` = \'GIRI WIJAYANTORO\'
+WHERE `id_paslon` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_paslon` SET `no_urut` = \'01\', `nama_paslon` = \'JAN JAP ORMUSERAY\', `nama_wakiol` = \'GIRI WIJAYANTORO\'
+WHERE `id_paslon` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_paslon` SET `no_urut` = \'01\', `nama_paslon` = \'JAN JAP ORMUSERAY\', `nama_wakiol` = \'GIRI WIJAYANTORO\'
+WHERE `id_paslon` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_paslon` SET `no_urut` = :no_urut:, `nama_paslon` = :nama_paslon:, `nama_wakiol` = :nama_wakiol:
+WHERE `id_paslon` = :id_paslon:', [...], false)
+ 5 APPPATH\Models\M_paslon.php(28): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Paslon.php(78): App\Models\M_paslon->UpdateOne([...], [...], 'tb_paslon')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Paslon->update_paslon_post()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-11 04:10:28 --> Undefined variable: halaman
+in APPPATH\Views\layout\MasterLayout.php on line 32.
+ 1 APPPATH\Views\layout\MasterLayout.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: halaman', 'APPPATH\\Views\\layout\\MasterLayout.php', 32, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\MasterLayout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/MasterLayout', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/r-users', [], true)
+ 6 APPPATH\Controllers\Users.php(17): view('users/r-users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

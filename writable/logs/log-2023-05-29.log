@@ -1,0 +1,26 @@
+CRITICAL - 2023-05-29 12:05:34 --> Undefined property: stdClass::$id_pd
+in APPPATH\Views\econtrolling\r-renja.php on line 166.
+ 1 APPPATH\Views\econtrolling\r-renja.php(166): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_pd', 'APPPATH\\Views\\econtrolling\\r-renja.php', 166, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\r-renja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 5 APPPATH\Controllers\Controlling.php(43): view('econtrolling/r-renja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-29 12:06:25 --> Invalid file: controlling/u-renja.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('controlling/u-renja.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('controlling/u-renja', null, true)
+ 3 APPPATH\Views\econtrolling\r-renja.php(198): CodeIgniter\View\View->include('controlling/u-renja')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\r-renja.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 7 APPPATH\Controllers\Controlling.php(43): view('econtrolling/r-renja', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

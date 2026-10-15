@@ -1,0 +1,69 @@
+CRITICAL - 2024-05-12 06:36:15 --> Undefined variable: distrik
+in APPPATH\Views\datamaster\u-kampung.php on line 29.
+ 1 APPPATH\Views\datamaster\u-kampung.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: distrik', 'APPPATH\\Views\\datamaster\\u-kampung.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\datamaster\\u-kampung.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('datamaster/u-kampung', null, true)
+ 5 APPPATH\Views\tps\r-tps.php(90): CodeIgniter\View\View->include('datamaster/u-kampung')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tps\\r-tps.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('tps/r-tps', [], true)
+ 9 APPPATH\Controllers\Tps.php(21): view('tps/r-tps', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->tps1()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-12 11:40:19 --> Undefined variable: id
+in APPPATH\Controllers\Tps.php on line 26.
+ 1 APPPATH\Controllers\Tps.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'APPPATH\\Controllers\\Tps.php', 26, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->GetKampungDropDown('4')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-12 11:40:36 --> Undefined variable: id
+in APPPATH\Controllers\Tps.php on line 26.
+ 1 APPPATH\Controllers\Tps.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'APPPATH\\Controllers\\Tps.php', 26, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->GetKampungDropDown('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-12 11:41:08 --> Undefined variable: id
+in APPPATH\Controllers\Tps.php on line 26.
+ 1 APPPATH\Controllers\Tps.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'APPPATH\\Controllers\\Tps.php', 26, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->GetKampungDropDown('5')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-12 11:42:09 --> Undefined variable: id
+in APPPATH\Controllers\Tps.php on line 26.
+ 1 APPPATH\Controllers\Tps.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'APPPATH\\Controllers\\Tps.php', 26, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->GetKampungDropDown('4')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-12 11:58:13 --> Call to undefined function {"connID":{"affected_rows":null,"client_info":null,"client_version":null,"connect_errno":null,"connect_error":null,"errno":null,"error":null,"error_list":null,"field_count":null,"host_info":null,"info":null,"insert_id":null,"server_info":null,"server_version":null,"sqlstate":null,"protocol_version":null,"thread_id":null,"warning_count":null},"resultID":{"current_field":null,"field_count":null,"lengths":null,"num_rows":null,"type":null},"resultArray":[],"resultObject":[],"customResultObject":[],"currentRow":0,"rowData":null}()
+in APPPATH\Controllers\Tps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->GetKampungDropDown('6')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-12 11:58:23 --> Call to undefined function {"connID":{"affected_rows":null,"client_info":null,"client_version":null,"connect_errno":null,"connect_error":null,"errno":null,"error":null,"error_list":null,"field_count":null,"host_info":null,"info":null,"insert_id":null,"server_info":null,"server_version":null,"sqlstate":null,"protocol_version":null,"thread_id":null,"warning_count":null},"resultID":{"current_field":null,"field_count":null,"lengths":null,"num_rows":null,"type":null},"resultArray":[],"resultObject":[],"customResultObject":[],"currentRow":0,"rowData":null}()
+in APPPATH\Controllers\Tps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->GetKampungDropDown('7')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-12 11:58:29 --> Call to undefined function {"connID":{"affected_rows":null,"client_info":null,"client_version":null,"connect_errno":null,"connect_error":null,"errno":null,"error":null,"error_list":null,"field_count":null,"host_info":null,"info":null,"insert_id":null,"server_info":null,"server_version":null,"sqlstate":null,"protocol_version":null,"thread_id":null,"warning_count":null},"resultID":{"current_field":null,"field_count":null,"lengths":null,"num_rows":null,"type":null},"resultArray":[],"resultObject":[],"customResultObject":[],"currentRow":0,"rowData":null}()
+in APPPATH\Controllers\Tps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->GetKampungDropDown('18')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

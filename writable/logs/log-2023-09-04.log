@@ -1,0 +1,42 @@
+CRITICAL - 2023-09-04 09:51:13 --> syntax error, unexpected end of file
+in APPPATH\Views\econtrolling\r-renja.php on line 239.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 3 APPPATH\Controllers\Controlling.php(168): view('econtrolling/r-renja', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-04 10:14:54 --> Undefined variable: pd
+in APPPATH\Controllers\Controlling.php on line 584.
+ 1 APPPATH\Controllers\Controlling.php(584): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pd', 'APPPATH\\Controllers\\Controlling.php', 584, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->cetak_renja('3227')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-04 10:31:15 --> Undefined variable: subkegiatan
+in APPPATH\Views\econtrolling\print-renja.php on line 209.
+ 1 APPPATH\Views\econtrolling\print-renja.php(209): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subkegiatan', 'APPPATH\\Views\\econtrolling\\print-renja.php', 209, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\print-renja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/print-renja', [], true)
+ 5 APPPATH\Controllers\Controlling.php(586): view('econtrolling/print-renja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->cetak_renja('3227')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-04 10:31:43 --> Undefined variable: subkegiatan
+in APPPATH\Views\econtrolling\print-renja.php on line 209.
+ 1 APPPATH\Views\econtrolling\print-renja.php(209): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subkegiatan', 'APPPATH\\Views\\econtrolling\\print-renja.php', 209, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\print-renja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/print-renja', [], true)
+ 5 APPPATH\Controllers\Controlling.php(586): view('econtrolling/print-renja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->cetak_renja('3227')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,36 @@
+ERROR - 2024-05-18 03:57:45 --> mysqli_sql_exception: Unknown column 'tps' in 'field list' in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_tps.php(28): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Tps.php(50): App\Models\M_tps->InsertOne(Array, 'tb_tps')
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Tps->create_tps_post()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-18 03:57:45 --> Unknown column 'tps' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_tps` (`no_tps`, `id_distrik`, `id_kampung`, `jumlah_suara_sah`, `tps`) VALUES (\'01\', \'1\', \'1\', \'130\', \'Michael\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_tps` (`no_tps`, `id_distrik`, `id_kampung`, `jumlah_suara_sah`, `tps`) VALUES (\'01\', \'1\', \'1\', \'130\', \'Michael\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_tps` (`no_tps`, `id_distrik`, `id_kampung`, `jumlah_suara_sah`, `tps`) VALUES (\'01\', \'1\', \'1\', \'130\', \'Michael\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_tps` (`no_tps`, `id_distrik`, `id_kampung`, `jumlah_suara_sah`, `tps`) VALUES (:no_tps:, :id_distrik:, :id_kampung:, :jumlah_suara_sah:, :tps:)', [...], false)
+ 5 APPPATH\Models\M_tps.php(28): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Tps.php(50): App\Models\M_tps->InsertOne([...], 'tb_tps')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Tps->create_tps_post()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tps))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-18 12:52:31 --> Class 'Locale' not found
+in SYSTEMPATH\CodeIgniter.php on line 186.
+ 1 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-05-18 12:57:30 --> Class 'Locale' not found
+in SYSTEMPATH\CodeIgniter.php on line 186.
+ 1 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-05-18 12:59:58 --> Class 'Locale' not found
+in SYSTEMPATH\CodeIgniter.php on line 186.
+ 1 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()

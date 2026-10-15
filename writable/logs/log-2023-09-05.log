@@ -1,0 +1,65 @@
+CRITICAL - 2023-09-05 13:52:20 --> Class 'App\Controllers\M_controlling' not found
+in APPPATH\Controllers\Monitoring.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Monitoring->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-05 13:53:36 --> Invalid file: monitoring/r-renja-catatan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('monitoring/r-renja-catatan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/r-renja-catatan', [], true)
+ 3 APPPATH\Controllers\Monitoring.php(31): view('monitoring/r-renja-catatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->renja_catatan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-05 13:54:06 --> Undefined variable: lev
+in APPPATH\Views\monitoring\r-renja-meja.php on line 47.
+ 1 APPPATH\Views\monitoring\r-renja-meja.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: lev', 'APPPATH\\Views\\monitoring\\r-renja-meja.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\r-renja-meja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/r-renja-meja', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(31): view('monitoring/r-renja-meja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->renja_catatan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-05 13:55:11 --> Undefined variable: session
+in APPPATH\Controllers\Monitoring.php on line 23.
+ 1 APPPATH\Controllers\Monitoring.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Controllers\\Monitoring.php', 23, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->renja_catatan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-05 13:55:47 --> Invalid file: meja/c-catatan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('meja/c-catatan.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('meja/c-catatan', null, true)
+ 3 APPPATH\Views\monitoring\r-renja-meja.php(215): CodeIgniter\View\View->include('meja/c-catatan')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\r-renja-meja.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/r-renja-meja', [], true)
+ 7 APPPATH\Controllers\Monitoring.php(34): view('monitoring/r-renja-meja', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->renja_catatan()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-05 13:56:13 --> Invalid file: monitoring/c-catatan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('monitoring/c-catatan.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('monitoring/c-catatan', null, true)
+ 3 APPPATH\Views\monitoring\r-renja-meja.php(215): CodeIgniter\View\View->include('monitoring/c-catatan')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\r-renja-meja.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/r-renja-meja', [], true)
+ 7 APPPATH\Controllers\Monitoring.php(34): view('monitoring/r-renja-meja', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->renja_catatan()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

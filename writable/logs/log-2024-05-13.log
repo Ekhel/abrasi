@@ -1,0 +1,25 @@
+CRITICAL - 2024-05-13 12:17:27 --> Undefined variable: halaman
+in APPPATH\Views\layout\MasterLayout.php on line 32.
+ 1 APPPATH\Views\layout\MasterLayout.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: halaman', 'APPPATH\\Views\\layout\\MasterLayout.php', 32, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\MasterLayout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/MasterLayout', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/r-users', [], true)
+ 6 APPPATH\Controllers\Users.php(17): view('users/r-users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-13 13:08:50 --> Undefined property: stdClass::$id_distrik
+in APPPATH\Views\datamaster\r-kampung.php on line 72.
+ 1 APPPATH\Views\datamaster\r-kampung.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_distrik', 'APPPATH\\Views\\datamaster\\r-kampung.php', 72, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\datamaster\\r-kampung.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('datamaster/r-kampung', [], true)
+ 5 APPPATH\Controllers\Datamaster.php(31): view('datamaster/r-kampung', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->kampung()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

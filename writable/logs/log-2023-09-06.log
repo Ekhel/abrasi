@@ -1,0 +1,554 @@
+ERROR - 2023-09-06 00:45:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'sickat_v182', 3306, '', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Auth->login()
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-09-06 00:45:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `nama` = :nama:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-06 06:15:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM tb_catatan 
+        WHERE idpd = '3227' 
+        GROUP BY kode_subkeg' at line 4 in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_monitoring.php(47): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Monitoring.php(33): App\Models\M_monitoring->CountCatatanRenja('3227')
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Monitoring->renja_catatan()
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-09-06 06:15:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM tb_catatan 
+        WHERE idpd = '3227' 
+        GROUP BY kode_subkeg' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        id_catatan,
+        COUNT(DISTINCT id_catatan) as jumlah_catatan, 
+        FROM tb_catatan 
+        WHERE idpd = \'3227\' 
+        GROUP BY kode_subkeg', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        id_catatan,
+        COUNT(DISTINCT id_catatan) as jumlah_catatan, 
+        FROM tb_catatan 
+        WHERE idpd = \'3227\' 
+        GROUP BY kode_subkeg')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        id_catatan,
+        COUNT(DISTINCT id_catatan) as jumlah_catatan, 
+        FROM tb_catatan 
+        WHERE idpd = \'3227\' 
+        GROUP BY kode_subkeg')
+ 4 APPPATH\Models\M_monitoring.php(47): CodeIgniter\Database\BaseConnection->query('SELECT
+        id_catatan,
+        COUNT(DISTINCT id_catatan) as jumlah_catatan, 
+        FROM tb_catatan 
+        WHERE idpd = \'3227\' 
+        GROUP BY kode_subkeg')
+ 5 APPPATH\Controllers\Monitoring.php(33): App\Models\M_monitoring->CountCatatanRenja('3227')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->renja_catatan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-06 06:44:54 --> mysqli_sql_exception: Unknown column 'tb_catatan.id_kegmonmeja' in 'on clause' in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_monitoring.php(19): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Monitoring.php(17): App\Models\M_monitoring->GetAllJadwalMonevMeja()
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Monitoring->index()
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-09-06 06:44:54 --> Unknown column 'tb_catatan.id_kegmonmeja' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_kegmonmeja
+        ORDER BY
+            tanggal_mulai
+        DESC
+            ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_kegmonmeja
+        ORDER BY
+            tanggal_mulai
+        DESC
+            ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_kegmonmeja
+        ORDER BY
+            tanggal_mulai
+        DESC
+            ')
+ 4 APPPATH\Models\M_monitoring.php(19): CodeIgniter\Database\BaseConnection->query('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_kegmonmeja
+        ORDER BY
+            tanggal_mulai
+        DESC
+            ')
+ 5 APPPATH\Controllers\Monitoring.php(17): App\Models\M_monitoring->GetAllJadwalMonevMeja()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-06 06:48:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY id_keg' at line 20 in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_monitoring.php(19): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Monitoring.php(17): App\Models\M_monitoring->GetAllJadwalMonevMeja()
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Monitoring->index()
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-09-06 06:48:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY id_keg' at line 20
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_keg_monmeja
+        ORDER BY
+            tanggal_mulai DESC 
+        GROUP BY id_keg', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_keg_monmeja
+        ORDER BY
+            tanggal_mulai DESC 
+        GROUP BY id_keg')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_keg_monmeja
+        ORDER BY
+            tanggal_mulai DESC 
+        GROUP BY id_keg')
+ 4 APPPATH\Models\M_monitoring.php(19): CodeIgniter\Database\BaseConnection->query('SELECT
+        id_keg,
+        nama_keg,
+        tanggal_mulai,
+        tanggal_selesai,
+        jam_mulai,
+        jam_selesai,
+        lokus,
+        tb_jadwal_monev_meja.id_bidang,
+        tb_bidang_bappeda.nama_bidang,
+        COUNT(distinct tb_catatan.idpd) as jumlah_pd,
+        tempat,
+        tahun_keg
+        FROM
+            tb_jadwal_monev_meja
+        LEFT JOIN tb_bidang_bappeda ON tb_jadwal_monev_meja.id_bidang = tb_bidang_bappeda.id_bidang_bap
+        LEFT JOIN tb_catatan ON tb_jadwal_monev_meja.id_keg = tb_catatan.id_keg_monmeja
+        ORDER BY
+            tanggal_mulai DESC 
+        GROUP BY id_keg')
+ 5 APPPATH\Controllers\Monitoring.php(17): App\Models\M_monitoring->GetAllJadwalMonevMeja()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-06 13:02:21 --> mysqli_sql_exception: Unknown column 'tb_pd.id_pd' in 'on clause' in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_monitoring.php(62): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Monitoring.php(87): App\Models\M_monitoring->GetPdByIdMonMeja('10')
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Monitoring->monev_pd('10')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-09-06 13:02:21 --> Unknown column 'tb_pd.id_pd' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        idpd,
+        pd,
+        COUNT(Distinct catatan) as jumlah_catatan
+        FROM tb_catatan
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd
+        WHERE id_keg_monmeja = \'10\'
+        GROUP BY idpd ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        idpd,
+        pd,
+        COUNT(Distinct catatan) as jumlah_catatan
+        FROM tb_catatan
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd
+        WHERE id_keg_monmeja = \'10\'
+        GROUP BY idpd ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        idpd,
+        pd,
+        COUNT(Distinct catatan) as jumlah_catatan
+        FROM tb_catatan
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd
+        WHERE id_keg_monmeja = \'10\'
+        GROUP BY idpd ')
+ 4 APPPATH\Models\M_monitoring.php(62): CodeIgniter\Database\BaseConnection->query('SELECT
+        idpd,
+        pd,
+        COUNT(Distinct catatan) as jumlah_catatan
+        FROM tb_catatan
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd
+        WHERE id_keg_monmeja = \'10\'
+        GROUP BY idpd ')
+ 5 APPPATH\Controllers\Monitoring.php(87): App\Models\M_monitoring->GetPdByIdMonMeja('10')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->monev_pd('10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-06 14:00:41 --> Undefined property: stdClass::$id_pd
+in APPPATH\Views\monitoring\r-monev-pd.php on line 61.
+ 1 APPPATH\Views\monitoring\r-monev-pd.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_pd', 'APPPATH\\Views\\monitoring\\r-monev-pd.php', 61, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\r-monev-pd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/r-monev-pd', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(89): view('monitoring/r-monev-pd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->monev_pd('10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-06 14:34:27 --> syntax error, unexpected end of file
+in APPPATH\Views\monitoring\r-monev-pd.php on line 115.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/r-monev-pd', [], true)
+ 3 APPPATH\Controllers\Monitoring.php(90): view('monitoring/r-monev-pd', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->monev_pd('10')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-06 14:40:49 --> mysqli_sql_exception: Column 'notulen' cannot be null in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sickat_v1.8\app\Models\M_monitoring.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Monitoring.php(122): App\Models\M_monitoring->InsertOne(Array, 'tb_notulensi')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Monitoring->create_notulensi_post()
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-09-06 14:40:49 --> Column 'notulen' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_notulensi` (`id_keg`, `id_pd`, `tim_monev1`, `tim_monev2`, `tim_monev3`, `tim_pd1`, `tim_pd2`, `tim_pd3`, `notulen`, `tanggal_buat`) VALUES (\'10\', \'3227\', \'Monev 1\', \'Monev 2\', \'Monev 3\', \'Tim PD 1\', \'Tim PD 2\', \'Tim PD 3\', NULL, \'2023-09-06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_notulensi` (`id_keg`, `id_pd`, `tim_monev1`, `tim_monev2`, `tim_monev3`, `tim_pd1`, `tim_pd2`, `tim_pd3`, `notulen`, `tanggal_buat`) VALUES (\'10\', \'3227\', \'Monev 1\', \'Monev 2\', \'Monev 3\', \'Tim PD 1\', \'Tim PD 2\', \'Tim PD 3\', NULL, \'2023-09-06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_notulensi` (`id_keg`, `id_pd`, `tim_monev1`, `tim_monev2`, `tim_monev3`, `tim_pd1`, `tim_pd2`, `tim_pd3`, `notulen`, `tanggal_buat`) VALUES (\'10\', \'3227\', \'Monev 1\', \'Monev 2\', \'Monev 3\', \'Tim PD 1\', \'Tim PD 2\', \'Tim PD 3\', NULL, \'2023-09-06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_notulensi` (`id_keg`, `id_pd`, `tim_monev1`, `tim_monev2`, `tim_monev3`, `tim_pd1`, `tim_pd2`, `tim_pd3`, `notulen`, `tanggal_buat`) VALUES (:id_keg:, :id_pd:, :tim_monev1:, :tim_monev2:, :tim_monev3:, :tim_pd1:, :tim_pd2:, :tim_pd3:, :notulen:, :tanggal_buat:)', [...], false)
+ 5 APPPATH\Models\M_monitoring.php(14): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Monitoring.php(122): App\Models\M_monitoring->InsertOne([...], 'tb_notulensi')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->create_notulensi_post()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-06 15:22:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.sub_keg,
+        tb_renja_sipd.pagu,
+        tb_pd.pd
+        FROM tb_cat...' at line 6 in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_monitoring.php(93): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Monitoring.php(149): App\Models\M_monitoring->GetCatatanByKegMonevAndPd('3227', '10')
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '10')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-09-06 15:22:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.sub_keg,
+        tb_renja_sipd.pagu,
+        tb_pd.pd
+        FROM tb_cat...' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        id_catatan,
+        catatan,
+        tb_catatan.kode_subkeg,
+        tb_catatan.kode_sbl
+        tb_renja_sipd.sub_keg,
+        tb_renja_sipd.pagu,
+        tb_pd.pd
+        FROM tb_catatan
+        LEFT JOIN tb_renja_sipd ON tb_catatan.idpd = tb_renja_sipd.id_pd_sipd
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd_sipd
+        WHERE tb_catatan.idpd = \'3227\' AND tb_catatan.id_keg_monmeja = \'10\' ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        id_catatan,
+        catatan,
+        tb_catatan.kode_subkeg,
+        tb_catatan.kode_sbl
+        tb_renja_sipd.sub_keg,
+        tb_renja_sipd.pagu,
+        tb_pd.pd
+        FROM tb_catatan
+        LEFT JOIN tb_renja_sipd ON tb_catatan.idpd = tb_renja_sipd.id_pd_sipd
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd_sipd
+        WHERE tb_catatan.idpd = \'3227\' AND tb_catatan.id_keg_monmeja = \'10\' ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        id_catatan,
+        catatan,
+        tb_catatan.kode_subkeg,
+        tb_catatan.kode_sbl
+        tb_renja_sipd.sub_keg,
+        tb_renja_sipd.pagu,
+        tb_pd.pd
+        FROM tb_catatan
+        LEFT JOIN tb_renja_sipd ON tb_catatan.idpd = tb_renja_sipd.id_pd_sipd
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd_sipd
+        WHERE tb_catatan.idpd = \'3227\' AND tb_catatan.id_keg_monmeja = \'10\' ')
+ 4 APPPATH\Models\M_monitoring.php(93): CodeIgniter\Database\BaseConnection->query('SELECT
+        id_catatan,
+        catatan,
+        tb_catatan.kode_subkeg,
+        tb_catatan.kode_sbl
+        tb_renja_sipd.sub_keg,
+        tb_renja_sipd.pagu,
+        tb_pd.pd
+        FROM tb_catatan
+        LEFT JOIN tb_renja_sipd ON tb_catatan.idpd = tb_renja_sipd.id_pd_sipd
+        LEFT JOIN tb_pd ON tb_catatan.idpd = tb_pd.id_pd_sipd
+        WHERE tb_catatan.idpd = \'3227\' AND tb_catatan.id_keg_monmeja = \'10\' ')
+ 5 APPPATH\Controllers\Monitoring.php(149): App\Models\M_monitoring->GetCatatanByKegMonevAndPd('3227', '10')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-06 15:24:04 --> mysqli_sql_exception: Unknown column 'id_pd_sipd' in 'where clause' in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Monitoring.php(150): App\Models\M_monitoring->GetNotulenByKegAndPd('3227', '10')
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '10')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-09-06 15:24:04 --> Unknown column 'id_pd_sipd' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM tb_notulensi WHERE id_pd_sipd = \'3227\' AND id_keg = \'10\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_notulensi WHERE id_pd_sipd = \'3227\' AND id_keg = \'10\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_notulensi WHERE id_pd_sipd = \'3227\' AND id_keg = \'10\'')
+ 4 APPPATH\Models\M_monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_notulensi WHERE id_pd_sipd = \'3227\' AND id_keg = \'10\'')
+ 5 APPPATH\Controllers\Monitoring.php(150): App\Models\M_monitoring->GetNotulenByKegAndPd('3227', '10')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-06 15:24:34 --> Undefined variable: keg
+in APPPATH\Views\monitoring\p-notulensi-pd.php on line 164.
+ 1 APPPATH\Views\monitoring\p-notulensi-pd.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: keg', 'APPPATH\\Views\\monitoring\\p-notulensi-pd.php', 164, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\p-notulensi-pd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/p-notulensi-pd', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(153): view('monitoring/p-notulensi-pd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-06 15:26:02 --> Undefined variable: keg
+in APPPATH\Views\monitoring\p-notulensi-pd.php on line 164.
+ 1 APPPATH\Views\monitoring\p-notulensi-pd.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: keg', 'APPPATH\\Views\\monitoring\\p-notulensi-pd.php', 164, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\p-notulensi-pd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/p-notulensi-pd', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(153): view('monitoring/p-notulensi-pd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-06 15:26:04 --> Undefined variable: keg
+in APPPATH\Views\monitoring\p-notulensi-pd.php on line 164.
+ 1 APPPATH\Views\monitoring\p-notulensi-pd.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: keg', 'APPPATH\\Views\\monitoring\\p-notulensi-pd.php', 164, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\p-notulensi-pd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/p-notulensi-pd', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(153): view('monitoring/p-notulensi-pd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-06 15:29:54 --> Trying to access array offset on value of type null
+in APPPATH\Views\monitoring\p-notulensi-pd.php on line 174.
+ 1 APPPATH\Views\monitoring\p-notulensi-pd.php(174): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\monitoring\\p-notulensi-pd.php', 174, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\monitoring\\p-notulensi-pd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('monitoring/p-notulensi-pd', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(153): view('monitoring/p-notulensi-pd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Monitoring->print_notulen('3227', '8')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

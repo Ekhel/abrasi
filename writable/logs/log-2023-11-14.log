@@ -1,0 +1,8 @@
+CRITICAL - 2023-11-14 09:08:25 --> Undefined variable: harga_satuan_per
+in APPPATH\Controllers\Controlling.php on line 273.
+ 1 APPPATH\Controllers\Controlling.php(273): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: harga_satuan_per', 'APPPATH\\Controllers\\Controlling.php', 273, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->update_rka_perubahan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

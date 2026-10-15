@@ -1,0 +1,45 @@
+CRITICAL - 2023-08-15 09:38:58 --> Invalid file: controlling/r-upload.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('controlling/r-upload.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('controlling/r-upload', [], true)
+ 3 APPPATH\Controllers\Controlling.php(21): view('controlling/r-upload', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->upload()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-15 12:51:19 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\Controlling.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->import_subkeg_post()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-15 12:56:14 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\Controlling.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->import_subkeg_post()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-15 12:59:18 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\Controlling.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->import_subkeg_post()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-15 13:00:09 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\Controlling.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->import_subkeg_post()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-15 13:03:38 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\Controlling.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->import_subkeg_post()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

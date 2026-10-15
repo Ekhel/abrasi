@@ -1,0 +1,285 @@
+ERROR - 2026-07-04 10:06:18 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'jjo', 3306, '', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\app_jjo\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Auth->login()
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:06:18 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `nik` = :nik:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:06:46 --> mysqli_sql_exception: Table 'jjo.v_dis_any' doesn't exist in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_dashboard.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:06:46 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dashboard.php on line 33.
+ 1 APPPATH\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:06:58 --> mysqli_sql_exception: Table 'jjo.v_dis_any' doesn't exist in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_dashboard.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:06:58 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dashboard.php on line 33.
+ 1 APPPATH\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:09:49 --> mysqli_sql_exception: Table 'jjo.v_dis_any' doesn't exist in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_dashboard.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:09:49 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dashboard.php on line 33.
+ 1 APPPATH\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:12:54 --> mysqli_sql_exception: Table 'jjo.v_dis_any' doesn't exist in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_dashboard.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:12:54 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dashboard.php on line 33.
+ 1 APPPATH\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:16:34 --> mysqli_sql_exception: Table 'jjo.v_distrik2' doesn't exist in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_dashboard.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:16:34 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dashboard.php on line 33.
+ 1 APPPATH\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:16:36 --> mysqli_sql_exception: Table 'jjo.v_distrik2' doesn't exist in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_dashboard.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:16:36 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dashboard.php on line 33.
+ 1 APPPATH\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2026-07-04 10:17:37 --> Call to a member function getResult() on array
+in APPPATH\Models\M_dashboard.php on line 35.
+ 1 APPPATH\Controllers\Dashboard.php(19): App\Models\M_dashboard->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2026-07-04 10:40:38 --> Undefined variable: current_uri
+in APPPATH\Views\layout\menu.php on line 15.
+ 1 APPPATH\Views\layout\menu.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: current_uri', 'APPPATH\\Views\\layout\\menu.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\menu.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('layout/menu', null, true)
+ 5 APPPATH\Views\layout\MasterLayout.php(25): CodeIgniter\View\View->include('layout/menu')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\MasterLayout.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/MasterLayout', [], true)
+ 9 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+10 APPPATH\Controllers\Dashboard.php(23): view('pages/dashboard', [...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index1()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2026-07-04 10:47:35 --> Undefined variable: halaman
+in APPPATH\Views\layout\MasterLayout.php on line 33.
+ 1 APPPATH\Views\layout\MasterLayout.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: halaman', 'APPPATH\\Views\\layout\\MasterLayout.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\MasterLayout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/MasterLayout', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/r-users', [], true)
+ 6 APPPATH\Controllers\Users.php(17): view('users/r-users', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:47:41 --> mysqli_sql_exception: Table 'jjo.v_dis_any' doesn't exist in C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\dashboard_abrasi\app\Models\M_dpt.php(125): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\dashboard_abrasi\app\Controllers\Dpt.php(219): App\Models\M_dpt->GetDistrik()
+#6 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dpt->distrikany()
+#7 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dpt))
+#8 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\dashboard_abrasi\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:47:41 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dpt.php on line 125.
+ 1 APPPATH\Controllers\Dpt.php(219): App\Models\M_dpt->GetDistrik()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dpt->distrikany()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dpt))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 10:47:43 --> mysqli_sql_exception: Table 'jjo.v_dapil_paslon' doesn't exist in C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\dashboard_abrasi\app\Models\M_dpt.php(176): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\dashboard_abrasi\app\Controllers\Dpt.php(327): App\Models\M_dpt->GetALlPaslonDapil()
+#6 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dpt->dapil()
+#7 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dpt))
+#8 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\dashboard_abrasi\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 10:47:43 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_dpt.php on line 176.
+ 1 APPPATH\Controllers\Dpt.php(327): App\Models\M_dpt->GetALlPaslonDapil()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dpt->dapil()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dpt))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2026-07-04 23:32:10 --> mysqli_sql_exception: Table 'abrasi.v_kampung' doesn't exist in C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\dashboard_abrasi\app\Models\M_datamaster.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\dashboard_abrasi\app\Controllers\Datamaster.php(39): App\Models\M_datamaster->GetAllKampung()
+#6 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Datamaster->kampung()
+#7 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+#8 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\dashboard_abrasi\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\dashboard_abrasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-07-04 23:32:10 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_datamaster.php on line 21.
+ 1 APPPATH\Controllers\Datamaster.php(39): App\Models\M_datamaster->GetAllKampung()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->kampung()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

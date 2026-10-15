@@ -1,0 +1,350 @@
+ERROR - 2023-05-22 13:45:45 --> mysqli_sql_exception: Unknown column 'id_subkeg' in 'from clause' in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_controlling.php(181): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Controlling.php(52): App\Models\M_controlling->GetKomponenByIdSubkeg('3230.3230.774.3...')
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Controlling->rka('3230.3230.774.3...')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-22 13:45:45 --> Unknown column 'id_subkeg' in 'from clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(id_subkeg,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY id_subkeg,kode_akun,id_rka', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(id_subkeg,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY id_subkeg,kode_akun,id_rka')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(id_subkeg,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY id_subkeg,kode_akun,id_rka')
+ 4 APPPATH\Models\M_controlling.php(181): CodeIgniter\Database\BaseConnection->query('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(id_subkeg,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY id_subkeg,kode_akun,id_rka')
+ 5 APPPATH\Controllers\Controlling.php(52): App\Models\M_controlling->GetKomponenByIdSubkeg('3230.3230.774.3646.13009')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->rka('3230.3230.774.3646.13009')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-05-22 13:49:10 --> mysqli_sql_exception: Unknown column 'tb_rka.id_subkeg' in 'field list' in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_controlling.php(182): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Controlling.php(52): App\Models\M_controlling->GetKomponenByIdSubkeg('3230.3230.774.3...')
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Controlling->rka('3230.3230.774.3...')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-22 13:49:10 --> Unknown column 'tb_rka.id_subkeg' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek,
+                kode_sbl
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(kode_sbl,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY kode_sbl,kode_akun,id_rka', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek,
+                kode_sbl
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(kode_sbl,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY kode_sbl,kode_akun,id_rka')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek,
+                kode_sbl
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(kode_sbl,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY kode_sbl,kode_akun,id_rka')
+ 4 APPPATH\Models\M_controlling.php(182): CodeIgniter\Database\BaseConnection->query('SELECT
+        tb_rka.id_rka,
+        tb_rka.id_subkeg,
+        tb_rka.kode_akun,
+        tb_rka.nama_akun,
+        subs_bl_teks,
+        ket_bl_teks,
+        nama_komponen,
+        sd,
+        tb_rka.kode_sbl AS kode_sbl,
+        harga_satuan,
+        satuan,
+        volume,
+        total_harga,
+        pagu_rek,
+        belanja_use,
+        tb_rka.total_harga / pagu_rek * 100 AS bobot_komponen,
+        realisasi_uang,
+        realisasi_fisik,
+        realisasi_uang / total_harga * 100 AS pbk,
+        realisasi_fisik / volume * 100 AS pbf,
+        realisasi_fisik / volume *(total_harga / pagu_rek * 100) AS pf
+        FROM
+            tb_rka
+        LEFT JOIN(
+            SELECT
+                id_subkeg,
+                kode_akun,
+                pagu_rek,
+                kode_sbl
+            FROM
+                v_akun
+            GROUP BY
+                id_subkeg,
+                kode_akun
+        ) a USING(kode_sbl,kode_akun)
+        WHERE
+            tb_rka.kode_sbl = \'3230.3230.774.3646.13009\'
+        GROUP BY kode_sbl,kode_akun,id_rka')
+ 5 APPPATH\Controllers\Controlling.php(52): App\Models\M_controlling->GetKomponenByIdSubkeg('3230.3230.774.3646.13009')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->rka('3230.3230.774.3646.13009')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

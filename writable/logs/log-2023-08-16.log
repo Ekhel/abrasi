@@ -1,0 +1,76 @@
+ERROR - 2023-08-16 12:17:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'sickat_v182', 3306, '', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Auth->login()
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-16 12:17:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`
+WHERE `nama` = :nama:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(26): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-16 12:26:55 --> mysqli_sql_exception: Column 'pptk' cannot be null in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sickat_v1.8\app\Models\M_controlling.php(20): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Controlling.php(72): App\Models\M_controlling->InsertMultiple(Array, 'tb_renja_sipd')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Controlling->import_subkeg_post()
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-08-16 12:26:55 --> Column 'pptk' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_renja_sipd` (`kode_urusan`, `kode_bidang`, `id_pd_sipd`, `id_program`, `id_kegiatan`, `id_subkeg`, `kode_sbl`, `urusan`, `bidang`, `kode_program`, `kode_kegiatan`, `kode_subkeg`, `pd`, `program`, `kegiatan`, `sub_keg`, `indikator_keg`, `satuan`, `pagu_murni`, `pagu`, `pagu_keg`, `pptk`, `type_subkeg`, `tahun_anggaran`, `create_data_in`) VALUES (\'2\', \'2.01\', \'3523\', \'1001\', \'12341\', \'100003\', \'3523.3523.1001.12341.100003\', \'URUSAN PEMERINTAHAN WAJIB\', \'Urusan Pemerintahan Bidang Pertanahan\', \'2.10.05\', \'2.10.05.2.01\', \'2.10.05.2.02.02\', \'DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN\', \'PROGRAM PENYELESAIAN GANTI KERUGIAN DAN SANTUNAN TANAH UNTUK PEMBANGUNAN\', \'Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan oleh Pemerintah Daerah Kabupaten/Kota\', \'Koordinasi dan Sinkronisasi Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan Oleh Pemerintah Daerah Kabupaten/Kota\', \'Jumlah Dokumen Koordinasi dan Sinkronisasi Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan oleh Pemerintah Daerah Kabupate/Kota\', \'DOKUMEN\', \'38779643000\', \'38779643000\', \'38779643000\', NULL, \'fisik\', \'2023\', \'SICKAT\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_renja_sipd` (`kode_urusan`, `kode_bidang`, `id_pd_sipd`, `id_program`, `id_kegiatan`, `id_subkeg`, `kode_sbl`, `urusan`, `bidang`, `kode_program`, `kode_kegiatan`, `kode_subkeg`, `pd`, `program`, `kegiatan`, `sub_keg`, `indikator_keg`, `satuan`, `pagu_murni`, `pagu`, `pagu_keg`, `pptk`, `type_subkeg`, `tahun_anggaran`, `create_data_in`) VALUES (\'2\', \'2.01\', \'3523\', \'1001\', \'12341\', \'100003\', \'3523.3523.1001.12341.100003\', \'URUSAN PEMERINTAHAN WAJIB\', \'Urusan Pemerintahan Bidang Pertanahan\', \'2.10.05\', \'2.10.05.2.01\', \'2.10.05.2.02.02\', \'DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN\', \'PROGRAM PENYELESAIAN GANTI KERUGIAN DAN SANTUNAN TANAH UNTUK PEMBANGUNAN\', \'Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan oleh Pemerintah Daerah Kabupaten/Kota\', \'Koordinasi dan Sinkronisasi Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan Oleh Pemerintah Daerah Kabupaten/Kota\', \'Jumlah Dokumen Koordinasi dan Sinkronisasi Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan oleh Pemerintah Daerah Kabupate/Kota\', \'DOKUMEN\', \'38779643000\', \'38779643000\', \'38779643000\', NULL, \'fisik\', \'2023\', \'SICKAT\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_renja_sipd` (`kode_urusan`, `kode_bidang`, `id_pd_sipd`, `id_program`, `id_kegiatan`, `id_subkeg`, `kode_sbl`, `urusan`, `bidang`, `kode_program`, `kode_kegiatan`, `kode_subkeg`, `pd`, `program`, `kegiatan`, `sub_keg`, `indikator_keg`, `satuan`, `pagu_murni`, `pagu`, `pagu_keg`, `pptk`, `type_subkeg`, `tahun_anggaran`, `create_data_in`) VALUES (\'2\', \'2.01\', \'3523\', \'1001\', \'12341\', \'100003\', \'3523.3523.1001.12341.100003\', \'URUSAN PEMERINTAHAN WAJIB\', \'Urusan Pemerintahan Bidang Pertanahan\', \'2.10.05\', \'2.10.05.2.01\', \'2.10.05.2.02.02\', \'DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN\', \'PROGRAM PENYELESAIAN GANTI KERUGIAN DAN SANTUNAN TANAH UNTUK PEMBANGUNAN\', \'Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan oleh Pemerintah Daerah Kabupaten/Kota\', \'Koordinasi dan Sinkronisasi Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan Oleh Pemerintah Daerah Kabupaten/Kota\', \'Jumlah Dokumen Koordinasi dan Sinkronisasi Penyelesaian Masalah Ganti Kerugian dan Santunan Tanah untuk Pembangunan oleh Pemerintah Daerah Kabupate/Kota\', \'DOKUMEN\', \'38779643000\', \'38779643000\', \'38779643000\', NULL, \'fisik\', \'2023\', \'SICKAT\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_renja_sipd` (`kode_urusan`, `kode_bidang`, `id_pd_sipd`, `id_program`, `id_kegiatan`, `id_subkeg`, `kode_sbl`, `urusan`, `bidang`, `kode_program`, `kode_kegiatan`, `kode_subkeg`, `pd`, `program`, `kegiatan`, `sub_keg`, `indikator_keg`, `satuan`, `pagu_murni`, `pagu`, `pagu_keg`, `pptk`, `type_subkeg`, `tahun_anggaran`, `create_data_in`) VALUES (:kode_urusan:, :kode_bidang:, :id_pd_sipd:, :id_program:, :id_kegiatan:, :id_subkeg:, :kode_sbl:, :urusan:, :bidang:, :kode_program:, :kode_kegiatan:, :kode_subkeg:, :pd:, :program:, :kegiatan:, :sub_keg:, :indikator_keg:, :satuan:, :pagu_murni:, :pagu:, :pagu_keg:, :pptk:, :type_subkeg:, :tahun_anggaran:, :create_data_in:)', [...], false)
+ 5 APPPATH\Models\M_controlling.php(20): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Controlling.php(72): App\Models\M_controlling->InsertMultiple([...], 'tb_renja_sipd')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->import_subkeg_post()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

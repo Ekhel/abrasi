@@ -1,0 +1,12 @@
+CRITICAL - 2023-05-14 20:21:46 --> Division by zero
+in APPPATH\Views\rka\r-rka.php on line 88.
+ 1 APPPATH\Views\rka\r-rka.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zero', 'APPPATH\\Views\\rka\\r-rka.php', 88, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rka\\r-rka.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('rka/r-rka', [], true)
+ 5 APPPATH\Controllers\Controlling.php(58): view('rka/r-rka', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->rka('3235.3235.422.1864.8887')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

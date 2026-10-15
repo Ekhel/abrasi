@@ -1,0 +1,143 @@
+CRITICAL - 2023-09-24 08:51:33 --> Division by zero
+in APPPATH\Views\rka\r-rka.php on line 113.
+ 1 APPPATH\Views\rka\r-rka.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zero', 'APPPATH\\Views\\rka\\r-rka.php', 113, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rka\\r-rka.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('rka/r-rka', [], true)
+ 5 APPPATH\Controllers\Controlling.php(123): view('rka/r-rka', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->rka('3235.3235.825.3804.14140')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-24 09:49:28 --> Undefined property: App\Controllers\Controlling::$M_contrilling
+in APPPATH\Controllers\Controlling.php on line 96.
+ 1 APPPATH\Controllers\Controlling.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Controlling::$M_contrilling', 'APPPATH\\Controllers\\Controlling.php', 96, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-24 09:49:55 --> Undefined property: App\Controllers\Controlling::$M_contrilling
+in APPPATH\Controllers\Controlling.php on line 96.
+ 1 APPPATH\Controllers\Controlling.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Controlling::$M_contrilling', 'APPPATH\\Controllers\\Controlling.php', 96, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-24 09:50:15 --> mysqli_sql_exception: Column 'kode_sbl' in field list is ambiguous in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT\r\n       ...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\sickat_v1.8\app\Models\M_controlling.php(103): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Controlling.php(96): App\Models\M_controlling->hitung_sd('3235')
+#5 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-09-24 09:50:15 --> Column 'kode_sbl' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT
+        kode_sbl,
+        sd,
+        SUM(total_harga) AS jumlah
+        FROM
+            tb_rka
+        LEFT JOIN tb_renja_sipd ON tb_rka.kode_sbl = tb_renja_sipd.kode_sbl
+        WHERE id_pd_sipd = \'3235\' 
+        GROUP BY sd ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+        kode_sbl,
+        sd,
+        SUM(total_harga) AS jumlah
+        FROM
+            tb_rka
+        LEFT JOIN tb_renja_sipd ON tb_rka.kode_sbl = tb_renja_sipd.kode_sbl
+        WHERE id_pd_sipd = \'3235\' 
+        GROUP BY sd ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+        kode_sbl,
+        sd,
+        SUM(total_harga) AS jumlah
+        FROM
+            tb_rka
+        LEFT JOIN tb_renja_sipd ON tb_rka.kode_sbl = tb_renja_sipd.kode_sbl
+        WHERE id_pd_sipd = \'3235\' 
+        GROUP BY sd ')
+ 4 APPPATH\Models\M_controlling.php(103): CodeIgniter\Database\BaseConnection->query('SELECT
+        kode_sbl,
+        sd,
+        SUM(total_harga) AS jumlah
+        FROM
+            tb_rka
+        LEFT JOIN tb_renja_sipd ON tb_rka.kode_sbl = tb_renja_sipd.kode_sbl
+        WHERE id_pd_sipd = \'3235\' 
+        GROUP BY sd ')
+ 5 APPPATH\Controllers\Controlling.php(96): App\Models\M_controlling->hitung_sd('3235')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-24 09:50:54 --> Undefined variable: i
+in APPPATH\Views\econtrolling\r-renja.php on line 175.
+ 1 APPPATH\Views\econtrolling\r-renja.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: i', 'APPPATH\\Views\\econtrolling\\r-renja.php', 175, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\r-renja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 5 APPPATH\Controllers\Controlling.php(109): view('econtrolling/r-renja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-24 09:52:45 --> Undefined variable: sum
+in APPPATH\Views\econtrolling\r-renja.php on line 175.
+ 1 APPPATH\Views\econtrolling\r-renja.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sum', 'APPPATH\\Views\\econtrolling\\r-renja.php', 175, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\r-renja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 5 APPPATH\Controllers\Controlling.php(109): view('econtrolling/r-renja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-24 09:53:30 --> Undefined variable: sum
+in APPPATH\Views\econtrolling\r-renja.php on line 175.
+ 1 APPPATH\Views\econtrolling\r-renja.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sum', 'APPPATH\\Views\\econtrolling\\r-renja.php', 175, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\r-renja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 5 APPPATH\Controllers\Controlling.php(109): view('econtrolling/r-renja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-24 09:54:41 --> Undefined variable: sum
+in APPPATH\Views\econtrolling\r-renja.php on line 175.
+ 1 APPPATH\Views\econtrolling\r-renja.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sum', 'APPPATH\\Views\\econtrolling\\r-renja.php', 175, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\econtrolling\\r-renja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 5 APPPATH\Controllers\Controlling.php(109): view('econtrolling/r-renja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-24 09:58:44 --> syntax error, unexpected end of file
+in APPPATH\Views\econtrolling\r-renja.php on line 243.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('econtrolling/r-renja', [], true)
+ 3 APPPATH\Controllers\Controlling.php(109): view('econtrolling/r-renja', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Controlling->renja()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controlling))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

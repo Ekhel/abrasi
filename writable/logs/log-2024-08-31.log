@@ -1,0 +1,89 @@
+ERROR - 2024-08-31 00:30:38 --> mysqli_sql_exception: Column 'nama_figure' cannot be null in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_paslon.php(20): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Paslon.php(135): App\Models\M_paslon->InsertOne(Array, 'tb_figure')
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Paslon->create_figure()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-08-31 00:30:38 --> Column 'nama_figure' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_figure` (`nama_figure`) VALUES (NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_figure` (`nama_figure`) VALUES (NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_figure` (`nama_figure`) VALUES (NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_figure` (`nama_figure`) VALUES (:nama_figure:)', [...], false)
+ 5 APPPATH\Models\M_paslon.php(20): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Paslon.php(135): App\Models\M_paslon->InsertOne([...], 'tb_figure')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Paslon->create_figure()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2024-08-31 00:41:04 --> mysqli_sql_exception: Unknown column 'id_figure' in 'where clause' in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_pasl...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_pasl...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_pasl...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_pasl...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_paslon.php(28): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Paslon.php(155): App\Models\M_paslon->UpdateOne(Array, Array, 'tb_paslon')
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Paslon->update_figure_post()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-08-31 00:41:04 --> Unknown column 'id_figure' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_paslon` SET `nama_figure` = \'Dr. HANA SALOMINA HIKOYABI, S.Pd., M.KP\'
+WHERE `id_figure` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_paslon` SET `nama_figure` = \'Dr. HANA SALOMINA HIKOYABI, S.Pd., M.KP\'
+WHERE `id_figure` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_paslon` SET `nama_figure` = \'Dr. HANA SALOMINA HIKOYABI, S.Pd., M.KP\'
+WHERE `id_figure` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_paslon` SET `nama_figure` = :nama_figure:
+WHERE `id_figure` IS NULL', [...], false)
+ 5 APPPATH\Models\M_paslon.php(28): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Paslon.php(155): App\Models\M_paslon->UpdateOne([...], [...], 'tb_paslon')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Paslon->update_figure_post()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2024-08-31 05:12:07 --> mysqli_sql_exception: Unknown column 'id_paslon' in 'where clause' in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `tb...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_paslon.php(34): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Paslon.php(178): App\Models\M_paslon->DeleteOne(Array, 'tb_figure')
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Paslon->delete_figure_post()
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-08-31 05:12:07 --> Unknown column 'id_paslon' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `tb_figure`
+WHERE `id_paslon` = \'11\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb_figure`
+WHERE `id_paslon` = \'11\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb_figure`
+WHERE `id_paslon` = \'11\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb_figure`
+WHERE `id_paslon` = :id_paslon:', [...], false)
+ 5 APPPATH\Models\M_paslon.php(34): CodeIgniter\Database\BaseBuilder->delete()
+ 6 APPPATH\Controllers\Paslon.php(178): App\Models\M_paslon->DeleteOne([...], 'tb_figure')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Paslon->delete_figure_post()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paslon))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

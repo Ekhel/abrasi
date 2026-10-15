@@ -1,0 +1,113 @@
+CRITICAL - 2024-05-21 12:04:15 --> Function name must be a string
+in APPPATH\Models\M_datamaster.php on line 43.
+ 1 APPPATH\Controllers\Datamaster.php(169): App\Models\M_datamaster->InsertMany([...], 'tb_dpt')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->import_dpt_post()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-21 12:38:51 --> Undefined property: stdClass::$distrik
+in APPPATH\Views\datamaster\r-dpt-kampung.php on line 69.
+ 1 APPPATH\Views\datamaster\r-dpt-kampung.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$distrik', 'APPPATH\\Views\\datamaster\\r-dpt-kampung.php', 69, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\datamaster\\r-dpt-kampung.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('datamaster/r-dpt-kampung', [], true)
+ 5 APPPATH\Controllers\Datamaster.php(183): view('datamaster/r-dpt-kampung', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('8')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2024-05-21 12:41:39 --> mysqli_sql_exception: Unknown column 'id_kampung' in 'where clause' in C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\app_jjo\app\Models\M_datamaster.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\app_jjo\app\Controllers\Datamaster.php(181): App\Models\M_datamaster->GetAllDptByIdKampung('8')
+#6 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('8')
+#7 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+#8 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\app_jjo\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\app_jjo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-21 12:41:39 --> Unknown column 'id_kampung' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `v_dpt`
+WHERE `id_kampung` = \'8\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `v_dpt`
+WHERE `id_kampung` = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `v_dpt`
+WHERE `id_kampung` = \'8\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `v_dpt`
+WHERE `id_kampung` = :id_kampung:', [...], false)
+ 5 APPPATH\Models\M_datamaster.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Datamaster.php(181): App\Models\M_datamaster->GetAllDptByIdKampung('8')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('8')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-21 12:46:31 --> Undefined variable: distrik
+in APPPATH\Views\datamaster\c-dpt.php on line 26.
+ 1 APPPATH\Views\datamaster\c-dpt.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: distrik', 'APPPATH\\Views\\datamaster\\c-dpt.php', 26, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\datamaster\\c-dpt.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('datamaster/c-dpt', null, true)
+ 5 APPPATH\Views\datamaster\r-dpt-kampung.php(96): CodeIgniter\View\View->include('datamaster/c-dpt')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\datamaster\\r-dpt-kampung.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('datamaster/r-dpt-kampung', [], true)
+ 9 APPPATH\Controllers\Datamaster.php(183): view('datamaster/r-dpt-kampung', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('7')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-21 13:05:23 --> Undefined property: stdClass::$jk
+in APPPATH\Views\datamaster\r-dpt-kampung.php on line 56.
+ 1 APPPATH\Views\datamaster\r-dpt-kampung.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$jk', 'APPPATH\\Views\\datamaster\\r-dpt-kampung.php', 56, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\datamaster\\r-dpt-kampung.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('datamaster/r-dpt-kampung', [], true)
+ 5 APPPATH\Controllers\Datamaster.php(183): view('datamaster/r-dpt-kampung', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('7')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-21 14:27:22 --> syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF)
+in APPPATH\Views\datamaster\r-dpt-kampung.php on line 75.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('datamaster/r-dpt-kampung', [], true)
+ 3 APPPATH\Controllers\Datamaster.php(183): view('datamaster/r-dpt-kampung', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('9')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-21 14:28:15 --> syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF)
+in APPPATH\Views\datamaster\r-dpt-kampung.php on line 75.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('datamaster/r-dpt-kampung', [], true)
+ 3 APPPATH\Controllers\Datamaster.php(183): view('datamaster/r-dpt-kampung', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('9')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2024-05-21 14:31:46 --> syntax error, unexpected 'endif' (T_ENDIF)
+in APPPATH\Views\datamaster\r-dpt-kampung.php on line 62.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('datamaster/r-dpt-kampung', [], true)
+ 3 APPPATH\Controllers\Datamaster.php(183): view('datamaster/r-dpt-kampung', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Datamaster->dpt_kampung('9')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datamaster))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,212 @@
+CRITICAL - 2023-09-16 08:51:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\Model->__call('GetRekapProgresBulanByLogin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->pd()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 09:04:52 --> Undefined variable: bulan
+in APPPATH\Controllers\Dashboard.php on line 35.
+ 1 APPPATH\Controllers\Dashboard.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: bulan', 'APPPATH\\Controllers\\Dashboard.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->pd()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 09:07:08 --> Undefined variable: rekap2
+in APPPATH\Views\pages\dashboard-pd.php on line 65.
+ 1 APPPATH\Views\pages\dashboard-pd.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: rekap2', 'APPPATH\\Views\\pages\\dashboard-pd.php', 65, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard-pd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard-pd', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(39): view('pages/dashboard-pd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->pd()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 09:07:50 --> Undefined variable: rekap2
+in APPPATH\Views\pages\dashboard-pd.php on line 92.
+ 1 APPPATH\Views\pages\dashboard-pd.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: rekap2', 'APPPATH\\Views\\pages\\dashboard-pd.php', 92, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard-pd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard-pd', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(39): view('pages/dashboard-pd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->pd()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 09:34:06 --> Undefined property: App\Controllers\Dashboard::$M_realisasi
+in APPPATH\Controllers\Dashboard.php on line 54.
+ 1 APPPATH\Controllers\Dashboard.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Dashboard::$M_realisasi', 'APPPATH\\Controllers\\Dashboard.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->cetak_rekap_renja_pd('Januari', '3202')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-16 09:35:12 --> mysqli_sql_exception: Unknown column 'id_pd' in 'where clause' in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sickat_v1.8\app\Models\M_dashboard.php(261): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Dashboard.php(54): App\Models\M_dashboard->GetProgramByBulanAndIdPd('Januari', '3202')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->cetak_rekap_renja_pd('Januari', '3202')
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-09-16 09:35:12 --> Unknown column 'id_pd' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `v_renja_program_rekap`
+WHERE `id_pd` = \'3202\'
+AND `bulan` = \'Januari\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `v_renja_program_rekap`
+WHERE `id_pd` = \'3202\'
+AND `bulan` = \'Januari\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `v_renja_program_rekap`
+WHERE `id_pd` = \'3202\'
+AND `bulan` = \'Januari\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `v_renja_program_rekap`
+WHERE `id_pd` = :id_pd:
+AND `bulan` = :bulan:', [...], false)
+ 5 APPPATH\Models\M_dashboard.php(261): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dashboard.php(54): App\Models\M_dashboard->GetProgramByBulanAndIdPd('Januari', '3202')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->cetak_rekap_renja_pd('Januari', '3202')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-09-16 09:40:01 --> mysqli_sql_exception: Table 'sickat_v182.v_renja_bulan7' doesn't exist in C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sickat_v1.8\app\Models\M_dashboard.php(285): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sickat_v1.8\app\Controllers\Dashboard.php(56): App\Models\M_dashboard->GetSubkegByBulanAndIdPd('Januari', '3202')
+#6 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->cetak_rekap_renja_pd('Januari', '3202')
+#7 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sickat_v1.8\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sickat_v1.8\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-09-16 09:40:01 --> Table 'sickat_v182.v_renja_bulan7' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `v_renja_bulan7`
+WHERE `id_pd_sipd` = \'3202\'
+AND `bulan` = \'Januari\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `v_renja_bulan7`
+WHERE `id_pd_sipd` = \'3202\'
+AND `bulan` = \'Januari\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `v_renja_bulan7`
+WHERE `id_pd_sipd` = \'3202\'
+AND `bulan` = \'Januari\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `v_renja_bulan7`
+WHERE `id_pd_sipd` = :id_pd_sipd:
+AND `bulan` = :bulan:', [...], false)
+ 5 APPPATH\Models\M_dashboard.php(285): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dashboard.php(56): App\Models\M_dashboard->GetSubkegByBulanAndIdPd('Januari', '3202')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->cetak_rekap_renja_pd('Januari', '3202')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 09:50:15 --> Undefined index: realisasi
+in APPPATH\Views\pages\dashboard.php on line 19.
+ 1 APPPATH\Views\pages\dashboard.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: realisasi', 'APPPATH\\Views\\pages\\dashboard.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 10:00:17 --> Undefined index: pagu_apbd
+in APPPATH\Views\pages\dashboard.php on line 19.
+ 1 APPPATH\Views\pages\dashboard.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pagu_apbd', 'APPPATH\\Views\\pages\\dashboard.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 10:01:36 --> Undefined index: tgl_record
+in APPPATH\Views\pages\dashboard.php on line 28.
+ 1 APPPATH\Views\pages\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: tgl_record', 'APPPATH\\Views\\pages\\dashboard.php', 28, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 10:01:57 --> Undefined index: pagu_apbd
+in APPPATH\Views\pages\dashboard.php on line 19.
+ 1 APPPATH\Views\pages\dashboard.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pagu_apbd', 'APPPATH\\Views\\pages\\dashboard.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 10:02:35 --> Undefined index: pagu
+in APPPATH\Views\pages\dashboard.php on line 19.
+ 1 APPPATH\Views\pages\dashboard.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pagu', 'APPPATH\\Views\\pages\\dashboard.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 10:07:44 --> Undefined index: pagu_abpd
+in APPPATH\Views\pages\dashboard.php on line 19.
+ 1 APPPATH\Views\pages\dashboard.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pagu_abpd', 'APPPATH\\Views\\pages\\dashboard.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-16 10:09:39 --> Undefined index: pk
+in APPPATH\Views\pages\dashboard.php on line 50.
+ 1 APPPATH\Views\pages\dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pk', 'APPPATH\\Views\\pages\\dashboard.php', 50, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
